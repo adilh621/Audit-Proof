@@ -2,7 +2,8 @@
   "env": {
       "browser": true,
       "commonjs": true,
-      "node": true
+      "node": true,
+      "es6": true
   },
   "rules": {
       "no-duplicate-case":"error",
@@ -29,6 +30,7 @@
           "error",
           2
       ],
+      "parser": "babel-eslint",
       "linebreak-style": [
           "error",
           "unix"
@@ -42,4 +44,5 @@
           "always"
       ]
   }
+
 }

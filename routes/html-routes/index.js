@@ -4,7 +4,7 @@ const commentsRoute = require("./comments");
 
 // get route -> index
 router.get("/", (req, res) => {
-   res.redirect("/comments");
+  res.redirect("/comments");
 });
 
 // comments page
