@@ -1,7 +1,7 @@
 module.exports = function(table) {
   if (process.env !== "production") {
-    console.log("\n🚀 init table seed");
-    return table.create({ comment: "🚀 init" });
+    console.log("\nLogIn was found");
+    return table.create({ email: "adilh621@gmail.com" , password: "blahblah" });
   }
   return Promise.resolve();
 };

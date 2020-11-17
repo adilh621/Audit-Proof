@@ -2,24 +2,89 @@
 <html lang="en">
 
 <head>
-   <title>Sequelize box</title>
-   <meta charset="UTF-8">
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet"
-         href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <!-- Optional theme -->
-   <link rel="stylesheet"
-         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   <link rel="stylesheet"
-         href="/assets/css/style.css"
-         type="text/css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Group 7">
+    <meta name="keywords" content="admin,dashboard">
+    <meta name="author" content="Project2">
+
+    <!-- title -->
+    <title>Group 7 {{title}}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="../../assets/css/lime.min.css" rel="stylesheet">
+    <link href="../../assets/css/lime.css" rel="stylesheet">
+
 </head>
 
 <body>
-   {{{ body }}}
+    
+    {{#if user}}
 
-   {{!-- add front end script if relevant --}}
-   {{!-- <script src="/assets/js/script.js"></script> --}}
+    <div class="lime-sidebar">
+        <div class="lime-sidebar-inner slimscroll">
+            <ul class="accordion-menu">
+                <li>
+                    <a href="/pages/sign-in">Sign In</a>
+                </li>
+                <li>
+                    <a href="/pages/sign-up">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="lime-header">
+        <nav class="navbar navbar-expand-lg">
+            <section class="material-design-hamburger navigation-toggle">
+                <a href="javascript:void(0)" class="button-collapse material-design-hamburger__icon">
+                    <span class="material-design-hamburger__layer"></span>
+                </a>
+            </section>
+            <a class="navbar-brand" href="/">Project 2</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons">keyboard_arrow_down</i>
+            </button>
+
+
+        </nav>
+    </div>
+
+    {{/if}}
+    <div class="lime-container">
+        <div class="lime-body">
+            {{{body}}}
+        </div>
+        {{#if user}}
+        <div class="lime-footer">
+            <div class="container">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+    </div>
+
+
+    <!-- Javascripts -->
+    <script src="../../assets/plugins/jquery/jquery-3.1.0.min.js"></script>
+    <script src="../../assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../../assets/plugins/chartjs/chart.min.js"></script>
+    <script src="../../assets/plugins/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../../assets/plugins/toastr/toastr.min.js"></script>
+    <script src="../../assets/js/lime.min.js"></script>
+    <script src="../../assets/js/pages/dashboard.js"></script>
 </body>
 
 </html>

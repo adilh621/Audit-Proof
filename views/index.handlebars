@@ -1,17 +1,93 @@
-<div class="col-md-12 "
-     id="top-bar">
-   <h1> Sequelize box </h1>
-</div>
-
 <div class="container">
-   <div class="row">
-
-
-      {{!-- view cooment  --}}
-      {{> viewComments}}
-
-      {{!-- post comment --}}
-      {{> postComments}}
-
-   </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Consulting Services</h5>
+                    <h2 class="float-right">$2,000</h2>
+                    <p>From last week</p>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="45"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Forensic Analysis</h5>
+                    <h2 class="float-right">$4,000</h2>
+                    <p>Orders in waitlist</p>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Internal Audit</h5>
+                    <h2 class="float-right">$3,000</h2>
+                    <p>For last 30 days</p>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Last Transactions</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Company</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0776</td>
+                                    <td>Sale Management</td>
+                                    <td>$18, 560</td>
+                                    <td><span class="badge badge-success">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0759</td>
+                                    <td>Dropbox</td>
+                                    <td>$40, 672</td>
+                                    <td><span class="badge badge-warning">In Progress</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0776</td>
+                                    <td>Sale Management</td>
+                                    <td>$18, 560</td>
+                                    <td><span class="badge badge-success">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0759</td>
+                                    <td>Dropbox</td>
+                                    <td>$40, 672</td>
+                                    <td><span class="badge badge-warning">In Progress</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    
+    
 </div>
