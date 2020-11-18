@@ -10,7 +10,7 @@
     <meta name="author" content="Project2">
 
     <!-- title -->
-    <title>Group 7 {{title}}</title>
+    <title>AuditProof</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
@@ -25,52 +25,23 @@
 
 <body>
     
-    {{#if user}}
-
-    <div class="lime-sidebar">
-        <div class="lime-sidebar-inner slimscroll">
-            <ul class="accordion-menu">
-                <li>
-                    <a href="/sign-in">Sign In</a>
-                </li>
-                <li>
-                    <a href="/sign-up">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    
 
 
-    <div class="lime-header">
-        <nav class="navbar navbar-expand-lg">
-            <section class="material-design-hamburger navigation-toggle">
-                <a href="javascript:void(0)" class="button-collapse material-design-hamburger__icon">
-                    <span class="material-design-hamburger__layer"></span>
-                </a>
-            </section>
-            <a class="navbar-brand" href="/">AuditProof</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="material-icons">keyboard_arrow_down</i>
-            </button>
 
-
-        </nav>
-    </div>
-
-    {{/if}}
+    
     <div class="lime-container">
         <div class="lime-body">
             {{{body}}}
         </div>
-        {{#if user}}
+        
         <div class="lime-footer">
             <div class="container">
                 <div class="row">
                 </div>
             </div>
         </div>
-        {{/if}}
+        
 
     </div>
 
