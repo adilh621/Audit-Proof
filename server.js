@@ -23,6 +23,8 @@ app.use(
  app.use(passport.initialize());
  app.use(passport.session());
 
+ app.use
+
 const exphbs = require("express-handlebars");
 
 app.engine(
@@ -34,9 +36,12 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
 // var routes = require("./controllers/burgersController.js");
 
-app.use("/api", apiRoutes);
+app.use( apiRoutes);
 app.use(htmlRoutes);
 
 

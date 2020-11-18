@@ -1,6 +1,6 @@
 // const { noExtendLeft } = require("sequelize/types/lib/operators");
 
-const bcrypt = require("bcryptjs");
+// const bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {
   const LogIn = sequelize.define("LogIn", {
@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
   //   });
   // }
   LogIn.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
+    return (password === this.password);
   };
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password

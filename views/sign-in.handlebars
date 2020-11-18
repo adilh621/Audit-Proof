@@ -7,7 +7,7 @@
                     <div class="card login-box">
                         <div class="card-body">
                             <h5 class="card-title">Sign In</h5>
-                            <form>
+                            <form action="/api/login" class="login" method="POST">
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Enter email">
@@ -21,7 +21,7 @@
                                     <label class="custom-control-label" for="exampleCheck1">Remember</label>
                                 </div>
                                 <a href="#" class="float-left forgot-link">Forgot password?</a>
-                                <a href="/index" class="btn btn-primary float-right m-l-xxs">Sign In</a>
+                                <button class="btn btn-primary float-right m-l-xxs submit">Sign In</button>
                                 <a href="/sign-up" class="btn btn-secondary float-right">Sign Up</a>
                             </form>
                         </div>
