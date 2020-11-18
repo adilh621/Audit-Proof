@@ -43,11 +43,11 @@
         <div class="col-md-4">
             <div class="card stat-card">
                 <div class="card-body">
-                    <h5 class="card-title">Consulting Services</h5>
-                    <h2 class="float-right">$2,000</h2>
-                    <p>From last week</p>
+                    <h5 class="card-title">Accounts Receivable</h5>
+                    <h2 class="float-right">$50,000</h2>
+                    <p>outstanding</p>
                     <div class="progress" style="height: 10px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="45"
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="45"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
@@ -56,11 +56,11 @@
         <div class="col-md-4">
             <div class="card stat-card">
                 <div class="card-body">
-                    <h5 class="card-title">Forensic Analysis</h5>
-                    <h2 class="float-right">$4,000</h2>
-                    <p>Orders in waitlist</p>
+                    <h5 class="card-title">Current Revenue</h5>
+                    <h2 class="float-right">$1,255,000</h2>
+                    <p>YTD Revenue</p>
                     <div class="progress" style="height: 10px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60"
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 72%" aria-valuenow="60"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
@@ -69,11 +69,11 @@
         <div class="col-md-4">
             <div class="card stat-card">
                 <div class="card-body">
-                    <h5 class="card-title">Internal Audit</h5>
-                    <h2 class="float-right">$3,000</h2>
-                    <p>For last 30 days</p>
+                    <h5 class="card-title">New Customer</h5>
+                    <h2 class="float-right">4</h2>
+                    <p>For last fiscal period</p>
                     <div class="progress" style="height: 10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45"
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="45"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
@@ -96,30 +96,19 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                
+                                
+                                {{#each name}}
+                                
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><span class="badge badge-success"></span></td>
-                                </tr>
-                                <tr>
-                                    <td>0759</td>
-                                    <td>Dropbox</td>
-                                    <td>$40, 672</td>
+                                    <td>{{this.dataValues.id}}</td>
+                                    <td>{{this.dataValues.name}}</td>
+                                    <td>12,500</td>
                                     <td><span class="badge badge-warning">In Progress</span></td>
                                 </tr>
-                                <tr>
-                                    <td>0776</td>
-                                    <td>Sale Management</td>
-                                    <td>$18, 560</td>
-                                    <td><span class="badge badge-success">Paid</span></td>
-                                </tr>
-                                <tr>
-                                    <td>0759</td>
-                                    <td>Dropbox</td>
-                                    <td>$40, 672</td>
-                                    <td><span class="badge badge-warning">In Progress</span></td>
-                                </tr>
+                                {{/each}}
+                                
+
                             </tbody>
                         </table>
                     </div>

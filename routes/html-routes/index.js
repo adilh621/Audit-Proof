@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require("path");
 const isAuthenticated = require("../../config/middleware/isAuthenticated");
 
+const db = require("../../models");
+
 
 // first page user is brought too
 router.get("/", (req, res) => {
@@ -17,7 +19,15 @@ router.get("/", (req, res) => {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   router.get("/index", isAuthenticated, (req, res) => {
-    res.render(path.join(__dirname, "../../views/index.handlebars"));
+    db.Customer.findAll({})
+      .then((dbCustomer)=>{
+
+        res.render(path.join(__dirname, "../../views/index.handlebars"), {name: dbCustomer })
+        
+    
+      })
+    
+    
   });
 
   router.get("/logout", (req, res) => {
@@ -25,11 +35,7 @@ router.get("/", (req, res) => {
     res.redirect("/");
   });
 
-  router.get("/invoice", (req, res) => {
-    
-    res.render(path.join(__dirname, "../../views/invoice.handlebars"))
-    
-  });
+
 
   router.get("/ar", (req, res) => {
     
@@ -42,10 +48,34 @@ router.get("/", (req, res) => {
     res.render(path.join(__dirname, "../../views/cash.handlebars"))
     
   });
+
+
+
+
   router.get("/customer", (req, res) => {
+    db.Customer.findAll({})
+      .then((dbCustomer)=>{
+
+        res.render(path.join(__dirname, "../../views/customer.handlebars"), {name : dbCustomer })
+        
     
-    res.render(path.join(__dirname, "../../views/customer.handlebars"), {data: req.results})
-    console.log(req)
+      })
+
   });
 
+  router.get("/invoice", (req, res) => {
+    console.log("invoice page load")
+    db.Invoice.findAll({})
+      .then((dbInvoice)=>{
+        console.log(dbInvoice)
+        res.render(path.join(__dirname, "../../views/invoice.handlebars"), {id : dbInvoice})
+        
+    
+      })
+      .catch((err) => {console.log(err.message)})
+
+  });
+
+
 module.exports = router;
+

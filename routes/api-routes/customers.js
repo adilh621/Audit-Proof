@@ -9,7 +9,9 @@ module.exports = function(app) {
 app.get("/api/Customer/", function(req, res) {
   db.Customer.findAll({})
     .then(function(dbCustomer) {
-      res.json(dbCustomer);
+      res.render("customer", {
+        name : name
+      });
     });
 });
 
