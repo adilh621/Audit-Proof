@@ -25,6 +25,11 @@ router.get("/", (req, res) => {
   router.get("/index", isAuthenticated, (req, res) => {
     res.render(path.join(__dirname, "../../views/index.handlebars"));
   });
+
+  router.get("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/");
+  });
 // // when user hits /sign-in route , sign in page is rendered
 //   router.get('/sign-in', (req, res) => {
 

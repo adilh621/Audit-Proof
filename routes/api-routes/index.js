@@ -11,9 +11,5 @@ router.post("/api/login", passport.authenticate("local"), (req, res) => {
       id: req.user.id
     });
   });
-router.get("/logout", (req, res) => {
-    req.logout();
-    res.redirect("/");
-  });
 
 module.exports = router;
