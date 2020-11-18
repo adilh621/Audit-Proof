@@ -3,6 +3,10 @@ const apiRoutes = require("./routes/api-routes");
 const htmlRoutes = require("./routes/html-routes");
 const db = require("./models");
 const seed = require("./utils/seed");
+const seed1 = require("./utils/seed1");
+const seed2 = require("./utils/seed2");
+const seed3 = require("./utils/seed3");
+const seed4 = require("./utils/seed4");
 const errorHandler = require("./utils/errorHandler");
 const passport = require("./config/passport");
 const session = require("express-session")
@@ -52,6 +56,10 @@ app.use(errorHandler);
 db.sequelize.sync({ force: true }).then(async () => {
    // seed db
    await seed(db.LogIn);
+   await seed1(db.Customer);
+   await seed2(db.Invoice);
+   await seed3(db.Ar);
+   await seed4(db.Cash);
 
    app.listen(PORT, () => {
       console.log("🌎 => live on http://localhost:%s", PORT);
