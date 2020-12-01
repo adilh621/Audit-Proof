@@ -9,13 +9,16 @@ const seed3 = require("./utils/seed3");
 const seed4 = require("./utils/seed4");
 const errorHandler = require("./utils/errorHandler");
 const passport = require("./config/passport");
-const session = require("express-session")
+const session = require("express-session");
+const compression = require("compression")
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+app.use(compression());
 
 // Parse application body
 app.use(express.urlencoded({ extended: true }));
