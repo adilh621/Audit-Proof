@@ -21,7 +21,7 @@ efficiency, increase revenue and customer satisfaction.
 ![Audit Proof demo](./assets/demo.gif)
 
 ## Hosted App:
-The application is hosted on Heroku and can be found here 
+The application is hosted on Heroku and can be found here https://finance-manages.herokuapp.com/
 
 
 ## 💻 Technology Incorporated:
