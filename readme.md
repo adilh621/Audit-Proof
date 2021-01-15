@@ -1,30 +1,35 @@
 ![https://travis-ci.com/ronerlih/express-sequelize-box](https://travis-ci.com/ronerlih/express-sequelize-box.svg?branch=main&status=passed) ![https://app.codacy.com/gh/ronerlih/express-sequelize-box/dashboard](https://app.codacy.com/project/badge/Grade/d54fbe2005594f5884b61dbdf22ea604)
-# 📦 Express Sequelize box
+# 📂 Audit Proof
 
-## To-Do: Readme!
+## Description
 
-## Use
-- Fork or clone and copy what you need
+Created an innovative idea that could automate Client Data Management, A/R and order status directly from our current CMS. 
+This feature would be integrated with our user dashboard, giving our clients the power of monitoring their invoices and service status 24/7 directly from their dashboards - from anywhere, anytime.
 
-## env vars
-- for production set on heroku: https://dashboard.heroku.com/apps/<app-name>/settings -> reveal env vars
-- locally: creat a `.env` file with key and value pair in form/url encoding `SECRET_KEY=val`
-- connection code on models/index.js: !['assets/connection.png'](assets/connection.png)
 
-## Folder structure
-!['assets/structure.png'](assets/structure.png)
+## User Story
 
-## CI
-- travis: travis.io
-- code coverage: codacy.com
-- monitor on: https://ronerlih.loggly.com/search?terms=tag:heroku&from=-20m&until=now&source_group=&newtab=1#terms=&from=2020-11-07T12:03:00.296Z&until=2020-11-07T13:03:00.296Z&source_group=
+```
+As a SaaS, a start-up company, we often find ourselves 
+allocating the majority of our budget on payroll, 
+rather than automating some of the technical workflow to optimize 
+efficiency, increase revenue and customer satisfaction.
 
-## To-Do:
-- write tests (Jest / mocha+chai)
-   - send test reports to code covarage 
+```
 
-- log (winston/ bunyan/ log4js/ morgan)
-   - dashborad monitor + notifications
+## Application Demo:
+![Audit Proof demo](./assets/demo.gif)
 
-## Further
-- express best practices: https://expressjs.com/en/advanced/best-practice-performance.html
+## Hosted App:
+The application is hosted on Heroku and can be found here 
+
+
+## 💻 Technology Incorporated:
+- mySQL / Sequelize
+- Node.js
+- Handlebars.js
+- Express
+
+
+
+
