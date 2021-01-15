@@ -23,6 +23,11 @@ efficiency, increase revenue and customer satisfaction.
 ## Hosted App:
 The application is hosted on Heroku and can be found here https://finance-manages.herokuapp.com/
 
+```
+Credentials for entering App : adilh621@gmail.com : blahblah
+
+```
+
 
 ## 💻 Technology Incorporated:
 - mySQL / Sequelize
